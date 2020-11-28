@@ -17,11 +17,11 @@ void decision(char* cpuChoise, char* userChoise){
         return;
     }
 
-    if(strcmp(userChoise, choises[0]) == 0 && strcmp(cpuChoise, choises[1]) == 0){
+    if(strcmp(userChoise, choises[0]) == 0 && strcmp(cpuChoise, choises[2]) == 0){
         printf("You won!");
         return;
     }
-    if(strcmp(userChoise, choises[0]) == 0 && strcmp(cpuChoise, choises[2]) == 0){
+    if(strcmp(userChoise, choises[0]) == 0 && strcmp(cpuChoise, choises[1]) == 0){
         printf("You lose!");
         return;
     }
