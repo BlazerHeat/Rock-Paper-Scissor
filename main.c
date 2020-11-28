@@ -55,9 +55,10 @@ int main(){
     printf("Enter your choise: ");
     gets(userInput);
 
-    for (int i = 0; userInput[i]; i++)
+    for (int i = 0; i < 8; i++)
     {
-       userInput[i] = tolower(userInput[i]);
+        if(userInput[i] == '\0') break;
+        userInput[i] = tolower(userInput[i]);
     }
     
 
