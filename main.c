@@ -4,6 +4,8 @@
 #include<string.h>
 #include<time.h>
 
+char choises[3][8] = {"rock", "paper", "scissor"};
+
 int randInRange(int min, int max)
 {
   return (rand() % (max - min + 1)) + min;
@@ -15,29 +17,29 @@ void decision(char* cpuChoise, char* userChoise){
         return;
     }
 
-    if(strcmp(userChoise, "rock") == 0 && strcmp(cpuChoise, "paper") == 0){
+    if(strcmp(userChoise, choises[0]) == 0 && strcmp(cpuChoise, choises[1]) == 0){
         printf("You won!");
         return;
     }
-    if(strcmp(userChoise, "rock") == 0 && strcmp(cpuChoise, "scissor") == 0){
+    if(strcmp(userChoise, choises[0]) == 0 && strcmp(cpuChoise, choises[2]) == 0){
         printf("You lose!");
         return;
     }
 
-    if(strcmp(userChoise, "paper") == 0 && strcmp(cpuChoise, "rock") == 0){
+    if(strcmp(userChoise, choises[1]) == 0 && strcmp(cpuChoise, choises[0]) == 0){
         printf("You won!");
         return;
     }
-    if(strcmp(userChoise, "paper") == 0 && strcmp(cpuChoise, "scissor") == 0){
+    if(strcmp(userChoise, choises[1]) == 0 && strcmp(cpuChoise, choises[2]) == 0){
         printf("You lose!");
         return;
     }
 
-    if(strcmp(userChoise, "scissor") == 0 && strcmp(cpuChoise, "paper") == 0){
+    if(strcmp(userChoise, choises[2]) == 0 && strcmp(cpuChoise, choises[1]) == 0){
         printf("You won!");
         return;
     }
-    if(strcmp(userChoise, "scissor") == 0 && strcmp(cpuChoise, "rock") == 0){
+    if(strcmp(userChoise, choises[2]) == 0 && strcmp(cpuChoise, choises[0]) == 0){
         printf("You lose!");
         return;
     }
@@ -48,7 +50,6 @@ void decision(char* cpuChoise, char* userChoise){
 int main(){
     
     char userInput[8];
-    char choises[3][8] = {"rock", "paper", "scissor"};
 
     printf("Rock Paper Scissor\n");
     printf("Enter your choise: ");
