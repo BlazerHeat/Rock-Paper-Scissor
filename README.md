@@ -1,1 +1,1 @@
-# A simple Rock Paper Scissor game made in C
+# A simple Rock Paper Scissor Game Made in C
